@@ -1,5 +1,4 @@
-# OASIS3-MCT Namelist for EUR-0275
+# OASIS3-MCT namelist template idealizd cases
 
-OASIS namelist for kilometer-scale regional climate simulations. Used with the following experiment: eur-0275_iconv2.6.4-eclm-parflowv3.12_wfe-case
+OASIS namelist template for idealized test cases. Can be used in combination with TSMP2 workflow engine.
 
-** Warning ** The namelist are not finalized yet. Please check with caution.
