@@ -1,0 +1,32 @@
+#
+ $NFIELDS
+  3
+ $END
+#
+ $RUNTIME
+  __simlen__
+ $END
+#
+ $NLOGPRT
+  1 0
+ $END
+# FROM PARFLOW TO CLM 
+PFL_SOILLIQ ECLM_SOILLIQ 1 __cpltsp_ss__ 1 pfl_sat.nc EXPORTED
+__parflowgpx__ __parflowgpy__ __eclmgpx__ __eclmgpy__ gpfl gclm SEQ=1
+P 0 P 0
+SCRIPR
+ DISTWGT U SCALAR LATLON 1 1
+#
+PFL_PSI ECLM_PSI 1 __cpltsp_ss__ 1 pfl_psi.nc EXPORTED
+__parflowgpx__ __parflowgpy__ __eclmgpx__ __eclmgpy__ gpfl gclm SEQ=1
+P 0 P 0
+SCRIPR
+ DISTWGT U SCALAR LATLON 1 1
+# FROM CLM TO PARFLOW
+ECLM_ET PFL_ET 1 __cpltsp_ss__ 1 clm_flx.nc EXPORTED
+__eclmgpx__ __eclmgpy__ __parflowgpx__ __parflowgpy__ gclm gpfl SEQ=2
+P 0 P 0
+SCRIPR
+ DISTWGT U SCALAR LATLON 1 1
+#
+ $END
