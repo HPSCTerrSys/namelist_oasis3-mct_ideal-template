@@ -10,6 +10,8 @@
  $NLOGPRT
   1 0
  $END
+#
+ $STRINGS
 # FROM PARFLOW TO CLM 
 PFL_SOILLIQ ECLM_SOILLIQ 1 __cpltsp_ss__ 1 pfl_sat.nc EXPORTED
 __parflowgpx__ __parflowgpy__ __eclmgpx__ __eclmgpy__ gpfl gclm SEQ=1
